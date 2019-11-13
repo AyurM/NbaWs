@@ -110,6 +110,9 @@
     <Compile Include="PlayerInTeam.cs">
       <DependentUpon>Nba.tt</DependentUpon>
     </Compile>
+    <Compile Include="PlayersMain.xaml.cs">
+      <DependentUpon>PlayersMain.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PlayerStatistic.cs">
       <DependentUpon>Nba.tt</DependentUpon>
     </Compile>
@@ -166,6 +169,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PlayersMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="StartPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

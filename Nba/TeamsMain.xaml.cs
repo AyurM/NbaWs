@@ -36,11 +36,12 @@ namespace Nba {
         //Команда перехода к экрану с детальными сведениями о команде. Для
         //корректного перехода нужно знать ID выбранной команды NBA. При этом
         //ссылка на выбранный объект Team является параметром команды OpenTeamDetail
-        private void OpenTeamDetailHandler(object sender, System.Windows.Input.ExecutedRoutedEventArgs e) {
+        private void OpenTeamDetailHandler(object sender, 
+                System.Windows.Input.ExecutedRoutedEventArgs e) {
             Team team = e.Parameter as Team;
 
             //Чтобы передать ID команды на страницу TeamDetail.xaml,
-            //добавляем параметр запроса с именем teamId и значением team.TeamId
+            //добавляем параметр запроса teamId со значением team.TeamId
             //к ссылке на страницу
             String uri = "TeamDetail.xaml?teamId=" + team.TeamId;
             NavigationService.Navigate(new Uri(uri, UriKind.RelativeOrAbsolute));

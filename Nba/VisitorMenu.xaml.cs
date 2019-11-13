@@ -21,5 +21,9 @@ namespace Nba {
         private void TeamsClick(object sender, RoutedEventArgs e) {
             NavigationService.Navigate(new Uri("TeamsMain.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void PlayersClick(object sender, RoutedEventArgs e) {
+            NavigationService.Navigate(new Uri("PlayersMain.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }

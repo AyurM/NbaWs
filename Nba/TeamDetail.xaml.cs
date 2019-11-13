@@ -87,11 +87,15 @@ namespace Nba
 
         private bool PlayerFilter(object item) {
             PlayerInTeam player = item as PlayerInTeam;
+            //Выбрать только игроков, выступающих за команду с нужным teamId и в
+            //указанном сезоне с seasonId
             return player.TeamId == teamId && player.SeasonId == seasonId;
         }
 
         private bool MatchupFilter(object item) {
             Matchup matchup = item as Matchup;
+            //Выбрать только матчи сезона с seasonId, в которых участвовала данная
+            //команда (дома или на выезде)
             return matchup.SeasonId == seasonId && (matchup.Team_Away == teamId 
                                                     || matchup.Team_Home == teamId);
         }

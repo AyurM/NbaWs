@@ -34,7 +34,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Button Content="Teams" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="150" Style="{StaticResource MainButton}" Height="64" Click="TeamsClick"/>
-            <Button Content="Players" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="150" Style="{StaticResource MainButton}" Height="64"/>
+            <Button Content="Players" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="150" Style="{StaticResource MainButton}" Height="64" Click="PlayersClick"/>
             <Button Content="Matchups" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="150" Style="{StaticResource MainButton}" Height="64"/>
             <Button Content="Photos" Grid.Column="1" HorizontalAlignment="Center" Margin="0" Grid.Row="1" VerticalAlignment="Center" Width="150" Style="{StaticResource MainButton}" Height="64"/>
         </Grid>

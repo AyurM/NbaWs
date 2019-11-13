@@ -32,3 +32,5 @@ C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\TeamsMain.bam
 C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\TeamDetail.g.cs
 C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\TeamDetail.baml
+C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\PlayersMain.g.cs
+C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\PlayersMain.baml
