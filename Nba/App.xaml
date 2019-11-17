@@ -7,6 +7,7 @@
         <Color x:Key="clrPrimary">#6996c2</Color>
         <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource clrPrimary}" />
         <SolidColorBrush x:Key="WhiteForeground" Color="White" />
+        <SolidColorBrush x:Key="BlackForeground" Color="Black" />
         <Style x:Key="HeaderText" TargetType="Label">
             <Setter Property="FontFamily" Value="Calibri"/>
             <Setter Property="FontSize" Value="16"/>

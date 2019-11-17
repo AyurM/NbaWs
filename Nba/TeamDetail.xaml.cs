@@ -41,17 +41,20 @@ namespace Nba
             //Извлечь ID выбранной команды из URI страницы
             String uri = NavigationService.CurrentSource.OriginalString;
             teamId = Int32.Parse(uri.Substring("TeamDetail.xaml?teamId=".Length));
-            seasonId = 1;
+
+            //Извлечь из базы данных ID последнего сезона
+            seasonId = context.Seasons.ToList().LastOrDefault<Season>().SeasonId;
 
             //Подготовить источники данных
             context.Teams.Load();
             context.Seasons.Load();
             context.PlayerInTeams.Load();
             context.Matchups.Load();
-            teamViewSource.Source = context.Teams.Local;
-            seasonViewSource.Source = context.Seasons.Local;
+            teamViewSource.Source = context.Teams.Local;            
             playerViewSource.Source = context.PlayerInTeams.Local;
             matchupViewSource.Source = context.Matchups.Local;
+            //Изменить порядок следования сезонов (от текущего к самому раннему)
+            seasonViewSource.Source = context.Seasons.Local.Reverse<Season>();
 
             //tabControl.SelectedIndex = 1;
 
