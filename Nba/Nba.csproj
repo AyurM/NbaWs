@@ -84,6 +84,9 @@
     <Compile Include="Division.cs">
       <DependentUpon>Nba.tt</DependentUpon>
     </Compile>
+    <Compile Include="EventAdminMenu.xaml.cs">
+      <DependentUpon>EventAdminMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Matchup.cs">
       <DependentUpon>Nba.tt</DependentUpon>
     </Compile>
@@ -150,10 +153,17 @@
     <Compile Include="TeamsMain.xaml.cs">
       <DependentUpon>TeamsMain.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TechAdminMenu.xaml.cs">
+      <DependentUpon>TechAdminMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VisitorMenu.xaml.cs">
       <DependentUpon>VisitorMenu.xaml</DependentUpon>
     </Compile>
     <Page Include="AdminLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EventAdminMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -182,6 +192,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TeamsMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TechAdminMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

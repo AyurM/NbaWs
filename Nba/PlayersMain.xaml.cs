@@ -24,7 +24,6 @@ namespace Nba {
 
         public PlayersMain() {
             InitializeComponent();
-            InitializeComponent();
             teamViewSource = ((CollectionViewSource)(FindResource("teamViewSource")));
             seasonViewSource = ((CollectionViewSource)(FindResource("seasonViewSource")));
             playerInTeamViewSource = ((CollectionViewSource)(FindResource("playerInTeamViewSource")));
@@ -57,7 +56,9 @@ namespace Nba {
         private void BackClick(object sender, RoutedEventArgs e) {
             NavigationService.Navigate(new Uri("VisitorMenu.xaml", UriKind.RelativeOrAbsolute));
         }
-       
+
+        //Событие выбора начальной буквы имени (обработчик команды LetterSelect,
+        //см. RoutedUICommand в блоке <Page.Resources> в файле разметки PlayersMain.xaml)
         private void LetterSelectHandler(object sender, ExecutedRoutedEventArgs e) {
             //Извлечь выбранную букву
             nameLetter = e.Parameter as String;
@@ -70,13 +71,33 @@ namespace Nba {
             //Выделить черным цветом выбранную букву
             selectedLetter = (Hyperlink)e.Source;
             selectedLetter.Foreground = Application.Current.FindResource("BlackForeground") as Brush;
+
+            //Применить фильтр по начальной букве имени
+            playerInTeamViewSource.View.Filter = PlayerLetterFilter;
+            playerInTeamViewSource.View.Refresh();
         }
 
+        //Фильтр игроков по команде и сезону
         private bool PlayerFilter(object item) {
             PlayerInTeam player = item as PlayerInTeam;
             //Выбрать только игроков, выступающих за команду с нужным teamId и в
             //указанном сезоне с seasonId
             return player.TeamId == teamId && player.SeasonId == seasonId;
+        }
+
+        //Фильтр игроков по первой букве имени
+        private bool PlayerLetterFilter(object item) {
+            PlayerInTeam player = item as PlayerInTeam;
+
+            //Если выбраны все игроки, то показать всех игроков выбранного сезона
+            if(nameLetter == "ALL") {
+                return player.SeasonId == seasonId;
+            } else {
+                //Если выбрана буква, то показать всех игроков данного сезона,
+                //чье имя начинается с указанной буквы
+                return player.SeasonId == seasonId && 
+                    player.Player.Name.StartsWith(nameLetter);
+            }            
         }
 
         //Обработчик выбора сезона

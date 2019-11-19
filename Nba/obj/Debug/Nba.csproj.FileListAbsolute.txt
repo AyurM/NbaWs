@@ -34,3 +34,7 @@ C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\TeamDetail.g.
 C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\TeamDetail.baml
 C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\PlayersMain.g.cs
 C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\PlayersMain.baml
+C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\EventAdminMenu.g.cs
+C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\EventAdminMenu.baml
+C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\TechAdminMenu.g.cs
+C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\TechAdminMenu.baml

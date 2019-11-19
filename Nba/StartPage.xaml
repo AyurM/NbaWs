@@ -11,8 +11,6 @@
     <Grid>
         <Image HorizontalAlignment="Left" Height="126" Margin="16,16,0,0" VerticalAlignment="Top" Width="61" Source="img/logo.jpg"/>
         <Label Content="NBA Management System" HorizontalAlignment="Center" Margin="100,16,0,0" VerticalAlignment="Top" Style="{StaticResource HeaderText}"/>
-        <TextBlock HorizontalAlignment="Center" Margin="100,48,16,0" TextWrapping="WrapWithOverflow" Text="Welcome to use this NBA Management system, you can 
-redirect to different pages according to your role by clicking the buttons bellow" VerticalAlignment="Top" Style="{StaticResource MainText}" TextAlignment="Center"/>
         <StackPanel HorizontalAlignment="Center" Height="64" Margin="0,200,0,0" VerticalAlignment="Top" Width="400" Orientation="Horizontal">
             <Button Focusable="False" Content="Visitor" Width="150" Style="{StaticResource MainButton}" Click="VisitorClick"/>
             <Button Focusable="False" Content="Admin" Width="150" Margin="100,0,0,0" Style="{StaticResource MainButton}" Click="AdminClick"/>

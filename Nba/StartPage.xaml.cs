@@ -26,8 +26,8 @@ namespace Nba {
             //Обновить заголовок окна
             Window.GetWindow(this).Title = "Main Screen";
             //Отключить кнопку Back
-            backButton.IsEnabled = false; 
-            
+            backButton.IsEnabled = false;
+
             pictures = context.Pictures.ToList();
             //Определить максимальный номер страницы
             maxIndex = pictures.Last().Id / 3 - 1;
@@ -68,26 +68,31 @@ namespace Nba {
             bitmap1.BeginInit();
             //Сформировать путь к картинке:
             //"img/pictures/" + название файла, которое было указано в таблице Pictures
-            bitmap1.UriSource = new Uri(picturePath + pictures[index * 3].Img, UriKind.Relative);
+            bitmap1.UriSource = new Uri(picturePath 
+                + pictures[index * 3].Img, 
+                UriKind.Relative);
             bitmap1.EndInit();
             //Показать картинку
             image1.Source = bitmap1;
 
             BitmapImage bitmap2 = new BitmapImage();
             bitmap2.BeginInit();
-            bitmap2.UriSource = new Uri(picturePath + pictures[index * 3 + 1].Img, UriKind.Relative);
+            bitmap2.UriSource = new Uri(picturePath 
+                + pictures[index * 3 + 1].Img, UriKind.Relative);
             bitmap2.EndInit();
             image2.Source = bitmap2;
 
             BitmapImage bitmap3 = new BitmapImage();
             bitmap3.BeginInit();
-            bitmap3.UriSource = new Uri(picturePath + pictures[index * 3 + 2].Img, UriKind.Relative);
+            bitmap3.UriSource = new Uri(picturePath 
+                + pictures[index * 3 + 2].Img, UriKind.Relative);
             bitmap3.EndInit();
             image3.Source = bitmap3;
         }
 
         private void VisitorClick(object sender, RoutedEventArgs e) {
-            NavigationService.Navigate(new Uri("VisitorMenu.xaml", UriKind.RelativeOrAbsolute));
+            NavigationService.Navigate(new Uri("VisitorMenu.xaml", 
+                UriKind.RelativeOrAbsolute));
         }
     }
 }
