@@ -46,7 +46,7 @@
     <Key>
       <PropertyRef Name="MatchupId" />
     </Key>
-    <Property Name="MatchupId" Type="int" Nullable="false" />
+    <Property Name="MatchupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="SeasonId" Type="int" Nullable="false" />
     <Property Name="MatchupTypeId" Type="int" Nullable="false" />
     <Property Name="Team_Away" Type="int" Nullable="false" />

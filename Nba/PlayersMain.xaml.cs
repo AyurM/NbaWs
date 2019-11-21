@@ -82,7 +82,8 @@ namespace Nba {
             PlayerInTeam player = item as PlayerInTeam;
             //Выбрать только игроков, выступающих за команду с нужным teamId и в
             //указанном сезоне с seasonId
-            return player.TeamId == teamId && player.SeasonId == seasonId;
+            return player.TeamId == teamId &&
+                player.SeasonId == seasonId;
         }
 
         //Фильтр игроков по первой букве имени

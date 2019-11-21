@@ -52,7 +52,7 @@
     <Key>
       <PropertyRef Name="MatchupId" />
     </Key>
-    <Property Name="MatchupId" Type="Int32" Nullable="false" />
+    <Property Name="MatchupId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="SeasonId" Type="Int32" Nullable="false" />
     <Property Name="MatchupTypeId" Type="Int32" Nullable="false" />
     <Property Name="Team_Away" Type="Int32" Nullable="false" />

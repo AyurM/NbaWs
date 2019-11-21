@@ -18,5 +18,14 @@ namespace Nba
         private void BackClick(object sender, RoutedEventArgs e) {
             NavigationService.Navigate(new Uri("AdminLogin.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void MatchupsClick(object sender, RoutedEventArgs e) {
+            NavigationService.Navigate(new Uri("AddMatchup.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e) {
+            //Обновить заголовок окна
+            Window.GetWindow(this).Title = "Event Administrator menu";
+        }
     }
 }

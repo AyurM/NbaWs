@@ -38,3 +38,5 @@ C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\EventAdminMen
 C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\EventAdminMenu.baml
 C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\TechAdminMenu.g.cs
 C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\TechAdminMenu.baml
+C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\AddMatchup.g.cs
+C:\Users\Администратор\source\repos\Nba\Nba\obj\Debug\AddMatchup.baml

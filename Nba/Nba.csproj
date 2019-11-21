@@ -69,6 +69,9 @@
     <Compile Include="ActionType.cs">
       <DependentUpon>Nba.tt</DependentUpon>
     </Compile>
+    <Compile Include="AddMatchup.xaml.cs">
+      <DependentUpon>AddMatchup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Admin.cs">
       <DependentUpon>Nba.tt</DependentUpon>
     </Compile>
@@ -159,6 +162,10 @@
     <Compile Include="VisitorMenu.xaml.cs">
       <DependentUpon>VisitorMenu.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddMatchup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AdminLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
