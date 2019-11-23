@@ -61,7 +61,7 @@
                                     <UniformGrid Margin="8" Columns="{Binding Divisions.Count}" Rows="1"/>
                                 </ItemsPanelTemplate>
                             </ItemsControl.ItemsPanel>
-                            
+
                             <!--Шаблон для отображения сведений об отдельно взятом дивизионе.
                             Представляет из себя заголовок с именем дивизона и сетку с
                             информацией о командах, входящих в дивизион-->
@@ -73,12 +73,9 @@
                                             <RowDefinition Height="Auto"/>
                                             <RowDefinition Height="*"/>
                                         </Grid.RowDefinitions>
-                                        
+
                                         <!--Название дивизиона размещается внутри Border, для отображения рамки вокруг TextBlock-->
-                                        <Border BorderBrush="Black" BorderThickness="0.5">
-                                            <TextBlock Grid.Row="0" Padding="4" Text="{Binding Name}" Style="{StaticResource MainText}" TextAlignment="Center" Background="#FFDFDCDC" Height="24" VerticalAlignment="Top"/>
-                                        </Border>
-                                        
+                                        <TextBlock Grid.Row="0" Padding="4" Text="{Binding Name}" Style="{StaticResource MainText}" TextAlignment="Center" Background="#FFDFDCDC" Height="24" VerticalAlignment="Top"/>                                        
                                         <!--Далее идет сетка с командами, входящими в данный дивизион-->
                                         <ItemsControl Grid.Row="1" ItemsSource="{Binding Teams}">
                                             <!--Строки с командами будут размещены внутри UniformGrid-->
@@ -88,11 +85,11 @@
                                                     <UniformGrid Rows="{Binding Teams.Count}" Columns="1"/>
                                                 </ItemsPanelTemplate>
                                             </ItemsControl.ItemsPanel>
-                                            
+
                                             <!--Шаблон для отображения сведений об отдельно взятой команде-->
                                             <ItemsControl.ItemTemplate>
                                                 <DataTemplate>
-                                                    
+
                                                     <!--Для отображения рамки сетка помещена внутрь элемента Border-->
                                                     <Border BorderBrush="Black" BorderThickness="0.5">
                                                         <Grid>
@@ -100,7 +97,7 @@
                                                                 <ColumnDefinition Width="Auto"/>
                                                                 <ColumnDefinition Width="*"/>
                                                             </Grid.ColumnDefinitions>
-                                                            
+
                                                             <!--Логотип команды-->
                                                             <Image Grid.Column="0" Source="{Binding Logo, Converter={StaticResource TeamLogoConverter}}" Width="48" Height="48" Margin="4,0" VerticalAlignment="Stretch">
                                                                 <!--Логотип должен реагировать на клик мышкой, поэтому добавляем данный элемент-->
@@ -110,17 +107,17 @@
                                                                     <MouseBinding Gesture="LeftClick" Command="{StaticResource OpenTeamDetail}" CommandParameter="{Binding}"/>
                                                                 </Image.InputBindings>
                                                             </Image>
-                                                            
+
                                                             <Grid Grid.Column="1">
                                                                 <Grid.ColumnDefinitions>
                                                                     <ColumnDefinition Width="*"/>
                                                                 </Grid.ColumnDefinitions>
-                                                                
+
                                                                 <Grid.RowDefinitions>
                                                                     <RowDefinition Height="*"/>
                                                                     <RowDefinition Height="*"/>
                                                                 </Grid.RowDefinitions>
-                                                                
+
                                                                 <!--Надпись с названием команды-->
                                                                 <Label Style="{StaticResource HeaderText}" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                                                                     <!--Надпись также должна реагировать на нажатие, поэтому вставляем гиперссылку.
@@ -136,7 +133,7 @@
                                                                             <Label Content="Roster" Style="{StaticResource TextLink}"/>
                                                                         </Hyperlink>
                                                                     </Label>
-                                                                    
+
                                                                     <Label Content="Matchup" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextLink}"/>
                                                                     <Label Content="First Lineup" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextLink}"/>
                                                                 </UniformGrid>
@@ -152,7 +149,6 @@
                         </ItemsControl>
                     </Grid>
                 </DataTemplate>
-                
             </TabControl.ContentTemplate>
         </TabControl>
     </Grid>

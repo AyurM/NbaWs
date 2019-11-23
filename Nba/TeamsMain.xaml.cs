@@ -13,7 +13,8 @@ namespace Nba {
 
         public TeamsMain() {
             InitializeComponent();
-            confViewSource = ((CollectionViewSource)(FindResource("conferenceViewSource")));            
+            confViewSource = ((CollectionViewSource)
+                (FindResource("conferenceViewSource")));            
             DataContext = this;
         }
 

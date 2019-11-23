@@ -52,14 +52,17 @@ namespace Nba {
                     errorTextBlock.Text = "";
 
                     if(admin.RoleId == "1") {
+                        
                         NavigationService.Navigate(new Uri("EventAdminMenu.xaml", 
                             UriKind.RelativeOrAbsolute));
                     } else if (admin.RoleId == "2") {
+                       
                         NavigationService.Navigate(new Uri("TechAdminMenu.xaml", 
                             UriKind.RelativeOrAbsolute));
                     }
                     return;
-                } else {
+                }
+                else {
                     //Jobnumber есть, но пароль неверный
                     errorTextBlock.Text = "Wrong password!";
                     return;
