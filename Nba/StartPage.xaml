@@ -32,5 +32,6 @@
             <Image x:Name="image3" Grid.Column="3" HorizontalAlignment="Left" Margin="8" VerticalAlignment="Center" Source="img/pictures/3.jpg" Stretch="UniformToFill"/>
             <Button x:Name="nextButton" Content="Next" Grid.Column="4" Grid.Row="0" Height="64" Click="NextClick"/>
         </Grid>
+        <Label x:Name="errorLabel" Content="" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center"/>
     </Grid>
 </Page>

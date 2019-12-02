@@ -27,16 +27,23 @@ namespace Nba {
             Window.GetWindow(this).Title = "Main Screen";
             //Отключить кнопку Back
             backButton.IsEnabled = false;
+            errorLabel.Content = Properties.Settings.Default.Blocked;
 
-            pictures = context.Pictures.ToList();
-            //Определить максимальный номер страницы
-            maxIndex = pictures.Last().Id / 3 - 1;
+            try {
+                pictures = context.Pictures.ToList();
+                //Определить максимальный номер страницы
+                maxIndex = pictures.Last().Id / 3 - 1;
 
-            //Вывести первые 3 картинки
-            ShowPictures();            
+                //Вывести первые 3 картинки
+                ShowPictures();
+            } catch {
+                errorLabel.Content = "Ошибка при подключении к базе данных!";
+            }                               
         }
 
         private void AdminClick(object sender, RoutedEventArgs e) {
+            Properties.Settings.Default.Blocked = true;
+            Properties.Settings.Default.Save();
             NavigationService.Navigate(new Uri("AdminLogin.xaml", UriKind.RelativeOrAbsolute));
         }
 
